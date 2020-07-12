@@ -1,0 +1,28 @@
+---
+layout: default
+title: Projects
+permalink: /projects.html
+---
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    {% for proj in site.projects %}
+    <tr>
+      <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+        <img src="{{proj.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+      </td>
+      <td style="padding:2.5%;width:75%;vertical-align:middle">
+        <h3>{{proj.title}}</h3>
+        <br><br>
+        {% if proj.page %}
+        <a href="{{proj.page}}">Project page</a> /
+        {% endif %}
+        {% if proj.code %}
+        <a href="{{proj.code}}">Code</a> /
+        {% endif %}
+        <p>
+          {{ proj.intro }}
+        </p>
+        
+      </td>
+    </tr>
+    {% endfor %}
+</table>
