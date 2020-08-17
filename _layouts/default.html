@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>{{ page.title }}</title>
+  <title>Xuxin Cheng</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
@@ -28,19 +28,19 @@
               <h1>
                 Xuxin Cheng (程旭欣)
               </h1>
-              <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Screenath</a>. I am working on robot learning of bipedal legged robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
+              <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a>. I am working on robot learning of bipedal legged robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
               </p>
               <p>
-              I received my B.S. from Beijing Institute of Technology in July <b>2020</b>, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>.
+              I received my B.S. from Beijing Institute of Technology in July 2020, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>.
               </p>
               <p>
               Previously I was at <a href="https://path.berkeley.edu">Berkeley PATH</a>, where I worked on Reinforcement Learning based ADAS (Advanced Driver-Assistance Systems) advised by Prof. <a href="https://path.berkeley.edu/ching-yao-chan">Ching-Yao Chan</a>. I also have experience at <a href="http://www.poss.pku.edu.cn">PKU POSS</a>, where I did research about traversability analysis of autonomous vehicles using deep inverse reinforcement learning, advised by Prof. <a href="http://www.cis.pku.edu.cn/info/1177/1382.htm">Huijing Zhao</a>.
               </p>
               <p style="text-align:center">
-                <a href="/docs/cv.pdf">CV</a> &nbsp;/&nbsp;
-                <a target="_blank" href="https://mailhide.io/e/zlsaB"> Email</a> &nbsp;/&nbsp;
-                <a href="https://github.com/chengxuxin">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://scholar.google.com/citations?user=Xw95j7YAAAAJ">Google Scholar</a>
+                [<a href="/docs/XuxinCheng_CV.pdf">CV</a>] &nbsp;&nbsp;
+                [<a target="_blank" href="mailto:chengxuxin99@gmail.com"> Email</a>]&nbsp;&nbsp;
+                [<a href="https://github.com/chengxuxin">GitHub</a>]&nbsp;&nbsp;
+                [<a href="https://scholar.google.com/citations?user=Z8vhOxYAAAAJ&hl=en">Google Scholar</a>]
               </p>
             </td>
             <td style="padding:1.5%;width:20%;max-width:20%">
@@ -48,43 +48,89 @@
             </td>
           </tr>
         </table>
+
         <br><br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <h2>Research</h2>
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
-            <td>
-              {% if page.title == "Researches" %}
-              <a href="/" style="color:#154360;">
-                <h2><b>Researches</b></h2>
-              {% else %}
-              <a href="/">
-                <h2>Researches</h2>
-              </a>{% endif %}&nbsp;&nbsp;&nbsp;&nbsp;
-            </td>
-            <td>
-              {% if page.title == "Projects" %}
-              <a href="/projects.html" style="color:#154360;">
-                <h2><b>Projects</b></h2>
-              {% else %}
-              <a href="/projects.html">
-                <h2>Projects</h2>
-              {% endif %}
-              </a>
-            </td>
-            <td style="width: 70%;"></td>
+            <h2>Research</h2>
           </tr>
-        </table>
+        </table> -->
         <hr>
-        {{content}}
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for rsc in site.research %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{rsc.image}}" alt="research image" style="width:auto; height:auto; max-width:100%" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{rsc.title}}</h3><br>
+              {% if rsc.author %}
+              {{rsc.author}}
+              {% endif %}<br>
+
+              {% if rsc.published %}
+              <em>{{rsc.published}}</em>
+              {% endif %}<br><br>
+              
+              {% if rsc.paper %}
+              [<a href={{rsc.paper}}>Paper</a>]&nbsp
+              {% endif %}
+              {% if rsc.page %}
+              [<a href="{{rsc.page}}">Project page</a>]&nbsp
+              
+              {% endif %}
+              {% if rsc.code %}
+              [<a href="{{rsc.code}}">Code</a>]&nbsp
+              {% endif %}
+              <p>
+                {{ rsc.intro }}
+              </p>
+              
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+        
+        <br><br>
+        <h2>Projects</h2>
+        <hr>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for proj in site.projects %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="{{proj.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{proj.title}}</h3>
+              <br><br>
+              {% if proj.page %}
+              [<a href="{{proj.page}}">Project page</a>]&nbsp
+              {% endif %}
+              {% if proj.code %}
+              [<a href="{{proj.code}}">Code</a>]&nbsp
+              {% endif %}
+              <p>
+                {{ proj.intro }}
+              </p>
+              
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td>
               <br><br><br><br>
               <p style="text-align:right;font-size:small;">
-                website design credit: <a style="font-size:small;" href="https://jonbarron.info">Jon Barron</a>
+                <a style="font-size:small;" href="https://jonbarron.info">website template credit</a>
               </p>
             </td>
           </tr>
         </table>
+      
       </td>
     </tr>
   </table>
