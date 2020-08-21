@@ -22,25 +22,25 @@
   <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
           <tr style="padding:0px">
-            <td style="padding:1.5%;width:60%;vertical-align:middle">
+            <td style="padding:1.5%;width:80%;vertical-align:middle">
               <h1>
                 Xuxin Cheng (程旭欣)
               </h1>
               <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a>. I am working on robot learning of bipedal legged robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
               </p>
               <p>
-              I received my B.S. from Beijing Institute of Technology in July 2020, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>.
+              I received my B.S. from Beijing Institute of Technology in July 2020, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>. My graduation thesis is available <a href="docs/GraduationThesis.pdf">here</a>.
               </p>
               <p>
               Previously I was at <a href="https://path.berkeley.edu">Berkeley PATH</a>, where I worked on Reinforcement Learning based ADAS (Advanced Driver-Assistance Systems) advised by Prof. <a href="https://path.berkeley.edu/ching-yao-chan">Ching-Yao Chan</a>. I also have experience at <a href="http://www.poss.pku.edu.cn">PKU POSS</a>, where I did research about traversability analysis of autonomous vehicles using deep inverse reinforcement learning, advised by Prof. <a href="http://www.cis.pku.edu.cn/info/1177/1382.htm">Huijing Zhao</a>.
               </p>
               <p style="text-align:center">
-                [<a href="/docs/XuxinCheng_CV.pdf">CV</a>] &nbsp;&nbsp;
-                [<a target="_blank" href="mailto:chengxuxin99@gmail.com"> Email</a>]&nbsp;&nbsp;
-                [<a href="https://github.com/chengxuxin">GitHub</a>]&nbsp;&nbsp;
-                [<a href="https://scholar.google.com/citations?user=Z8vhOxYAAAAJ&hl=en">Google Scholar</a>]
+                <a href="/docs/XuxinCheng_CV.pdf">CV</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a target="_blank" href="mailto:chengxuxin99@gmail.com"> Email</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://github.com/chengxuxin">GitHub</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="https://scholar.google.com/citations?user=Z8vhOxYAAAAJ&hl=en">Google Scholar</a>
               </p>
             </td>
             <td style="padding:1.5%;width:20%;max-width:20%">
@@ -48,19 +48,43 @@
             </td>
           </tr>
         </table>
-
+        
         <br><br>
         <h2>Research</h2>
         <hr>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
           {% for rsc in site.posts %}
           {% for cat in rsc.categories %}
           {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+          <tr onmouseout="{{rsc.abbr}}_stop()" onmouseover="{{rsc.abbr}}_start()">
+            <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
+              <div class="one" style="width:100%; height:auto; max-width:100%">
+                <div class="two" id='{{rsc.image}}' style="width:100%; height:auto; max-width:100%">
+                  <img src='{{rsc.image}}' style="width:100%; height:auto; max-width:100%">
+                </div>
+                {% if rsc.gif %}
+                <img src='{{rsc.gif}}' style="width:100%; height:auto; max-width:100%">
+                {% else %}
+                <img src='{{rsc.image}}' style="width:100%; height:auto; max-width:100%">
+                {% endif %}
+              </div>
+              <script type="text/javascript">
+                function {{rsc.abbr}}_start() {
+                  document.getElementById('{{rsc.image}}').style.opacity = "0";
+                }
+
+                function {{rsc.abbr}}_stop() {
+                  document.getElementById('{{rsc.image}}').style.opacity = "1";
+                }
+                nlt_stop()
+              </script>
+              <!-- {% if rsc.gif %}
+              <img src="{{rsc.image}}" onmouseover="src='{{rsc.gif}}'" onmouseout="src='{{rsc.image}}'" style="width:100%; height:auto; max-width:100%"/>
+              {% else %}
               <img src="{{rsc.image}}" alt="research image" style="width:auto; height:auto; max-width:100%" />
+              {% endif %} -->
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:20px 0px 20px 40px;width:80%;vertical-align:middle">
               <h3>{{rsc.title}}</h3><br>
               {% if rsc.author %}
               {{rsc.author}}
@@ -89,20 +113,45 @@
           {% endfor %}
           {% endfor %}
         </table>
+        <p>* denotes equal contribution</p>
         
-        <br><br>
-        <h2>Projects</h2>
+        <br><br><br>
+        <h2>Course Projects</h2>
         <hr>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table border="0" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           {% for proj in site.posts %}
           {% for cat in proj.categories %}
           {% if cat == 'projects' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+          <tr onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()">
+            <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
+              <div class="one" style="width:100%; height:auto; max-width:100%">
+                <div class="two" id='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                  <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                </div>
+                {% if proj.gif %}
+                <img src='{{proj.gif}}' style="width:100%; height:auto; max-width:100%">
+                {% else %}
+                <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                {% endif %}
+              </div>
+              <script type="text/javascript">
+                function {{proj.abbr}}_start() {
+                  document.getElementById('{{proj.image}}').style.opacity = "0";
+                }
+
+                function {{proj.abbr}}_stop() {
+                  document.getElementById('{{proj.image}}').style.opacity = "1";
+                }
+                nlt_stop()
+              </script>
+              <!-- {% if proj.gif %}
+              <img src="{{proj.image}}" onmouseover="src='{{proj.gif}}'" onmouseout="src='{{proj.image}}'" style="width:auto; height:auto; max-width:100%"/>
+              {% else %}
               <img src="{{proj.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              {% endif %} -->
             </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
+            <td style="padding:0px 0px 0px 40px;width:80%;vertical-align:middle">
               <h3>{{proj.title}}</h3>
               <br><br>
               {% if proj.page %}
@@ -110,6 +159,9 @@
               {% endif %}
               {% if proj.code %}
               [<a href="{{proj.code}}">Code</a>]&nbsp
+              {% endif %}
+              {% if proj.video %}
+              [<a href="{{proj.video}}">Video</a>]&nbsp
               {% endif %}
               <p>
                 {{ proj.intro }}
