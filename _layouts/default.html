@@ -24,26 +24,26 @@
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
           <tr style="padding:0px">
-            <td style="padding:1.5%;width:80%;vertical-align:middle">
+            <td style="padding:1.5%;width:70%;vertical-align:middle">
               <h1>
-                Xuxin Cheng (程旭欣)
+                Xuxin Cheng
               </h1>
-              <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a>. I am working on robot learning of bipedal legged robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
+              <p align='center'>chengxuxin [at] berkeley [dot] edu</p><br>
+              <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a> and Prof. <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>. I am working on motion imitation of bipedal legged robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> based on deep reinforcement learning in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
               </p>
               <p>
-              I received my B.S. from Beijing Institute of Technology in July 2020, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>. My graduation thesis is available <a href="docs/GraduationThesis.pdf">here</a>.
+              I received my B.S. from <a href="http://english.bit.edu.cn">Beijing Institute of Technology (BIT)</a> in July 2020, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>. My graduation thesis (in English) is available <a href="docs/GraduationThesis.pdf">here</a>.
               </p>
               <p>
-              Previously I was at <a href="https://path.berkeley.edu">Berkeley PATH</a>, where I worked on Reinforcement Learning based ADAS (Advanced Driver-Assistance Systems) advised by Prof. <a href="https://path.berkeley.edu/ching-yao-chan">Ching-Yao Chan</a>. I also have experience at <a href="http://www.poss.pku.edu.cn">PKU POSS</a>, where I did research about traversability analysis of autonomous vehicles using deep inverse reinforcement learning, advised by Prof. <a href="http://www.cis.pku.edu.cn/info/1177/1382.htm">Huijing Zhao</a>.
+              Previously I was at <a href="https://path.berkeley.edu">Berkeley PATH</a>, where I worked on Reinforcement Learning based ADAS (Advanced Driver-Assistance Systems) advised by Prof. <a href="https://its.berkeley.edu/people/ching-yao-chan">Ching-Yao Chan</a>. I also have experience at <a href="http://www.poss.pku.edu.cn">PKU POSS</a>, where I did research about traversability analysis of autonomous vehicles using deep inverse reinforcement learning, advised by Prof. <a href="http://www.cis.pku.edu.cn/info/1177/1382.htm">Huijing Zhao</a>.
               </p>
               <p style="text-align:center">
-                <a href="/docs/XuxinCheng_CV.pdf">CV</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a target="_blank" href="mailto:chengxuxin99@gmail.com"> Email</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="/docs/CV.pdf">CV</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 <a href="https://github.com/chengxuxin">GitHub</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 <a href="https://scholar.google.com/citations?user=Z8vhOxYAAAAJ&hl=en">Google Scholar</a>
               </p>
             </td>
-            <td style="padding:1.5%;width:20%;max-width:20%">
+            <td style="padding:4.5%;width:30%;max-width:30%">
               <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile.jpeg">
             </td>
           </tr>
@@ -56,7 +56,7 @@
           {% for rsc in site.posts %}
           {% for cat in rsc.categories %}
           {% if cat == 'research' %}
-          <tr onmouseout="{{rsc.abbr}}_stop()" onmouseover="{{rsc.abbr}}_start()">
+          <tr {% if rsc.gif %}onmouseout="{{rsc.abbr}}_stop()" onmouseover="{{rsc.abbr}}_start()"{% endif %}>
             <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
               <div class="one" style="width:100%; height:auto; max-width:100%">
                 <div class="two" id='{{rsc.image}}' style="width:100%; height:auto; max-width:100%">
@@ -123,7 +123,8 @@
           {% for proj in site.posts %}
           {% for cat in proj.categories %}
           {% if cat == 'projects' %}
-          <tr onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()">
+          
+        <tr {% if proj.gif %}onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()"{% endif %}>
             <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
               <div class="one" style="width:100%; height:auto; max-width:100%">
                 <div class="two" id='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
@@ -179,6 +180,7 @@
             <td>
               <br><br><br><br>
               <p style="text-align:right;font-size:small;">
+                <a style="font-size:small;" href="style="font-size:small;">source code</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a style="font-size:small;" href="https://jonbarron.info">website template credit</a>
               </p>
             </td>
