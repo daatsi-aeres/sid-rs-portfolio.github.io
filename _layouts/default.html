@@ -29,7 +29,7 @@
                 Xuxin Cheng
               </h1>
               <p align='center'>chengxuxin [at] berkeley [dot] edu</p><br>
-              <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a> and Prof. <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>. I am working on motion imitation of bipedal legged robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> based on deep reinforcement learning in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
+              <p>I am currently a visiting student at UC Berkeley advised by Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a>. I am working on reinforcement learning of bipedal robot <a href="https://www.agilityrobotics.com/robots#cassie">Cassie</a> in <a href="https://hybrid-robotics.berkeley.edu">HRL</a>. 
               </p>
               <p>
               I received my B.S. from <a href="http://english.bit.edu.cn">Beijing Institute of Technology (BIT)</a> in July 2020, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>. My graduation thesis (in English) is available <a href="docs/GraduationThesis.pdf">here</a>.
@@ -53,6 +53,7 @@
         <h2>Research</h2>
         <hr>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
+          My research interests include Robotics, Control, Optimization, Computer Vision, Reinforcement Learning and related fields.
           {% for rsc in site.posts %}
           {% for cat in rsc.categories %}
           {% if cat == 'research' %}
@@ -88,9 +89,10 @@
               <h3>{{rsc.title}}</h3><br>
               {% if rsc.author %}
               {{rsc.author}}
-              {% endif %}<br>
+              {% endif %}
 
               {% if rsc.publishedOn %}
+              <br>
               <em>{{rsc.publishedOn}}</em>
               {% endif %}<br><br>
               
@@ -122,7 +124,7 @@
         <table border="0" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           {% for proj in site.posts %}
           {% for cat in proj.categories %}
-          {% if cat == 'projects' %}
+          {% if cat == 'course' %}
           
         <tr {% if proj.gif %}onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()"{% endif %}>
             <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
@@ -154,6 +156,10 @@
             </td>
             <td style="padding:0px 0px 0px 40px;width:80%;vertical-align:middle">
               <h3>{{proj.title}}</h3>
+              {% if proj.course %}
+              <br>
+              <em>{{proj.course}}</em>
+              {% endif %}
               <br><br>
               {% if proj.page %}
               [<a href="{{proj.page}}">Project page</a>]&nbsp
@@ -180,7 +186,7 @@
             <td>
               <br><br><br><br>
               <p style="text-align:right;font-size:small;">
-                <a style="font-size:small;" href="style="font-size:small;">source code</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a style="font-size:small;" href="https://github.com/chengxuxin/chengxuxin.github.io">source code</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a style="font-size:small;" href="https://jonbarron.info">website template credit</a>
               </p>
             </td>
