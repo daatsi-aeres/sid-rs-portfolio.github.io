@@ -23,13 +23,19 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  border: 0px solid #555;
+  border-radius: 5px;
+}
+
 body,
 td,
 th,
 tr,
 p,
 a {
-  font-family:  'Lato', Verdana, Helvetica, sans-serif; /*'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;*/
+  font-family:  'Lato', Verdana, Helvetica, sans-serif;
+  // font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
   font-size: 16px; /*14px*/
   font-display: auto;
   line-height: 1.2;
@@ -42,7 +48,8 @@ strong {
 }
 
 h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  // font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
   font-size: 24px;
   font-display: auto;
   font-weight: normal;
@@ -53,6 +60,7 @@ h2 {
 
 h3 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  // font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
   font-size: 16px;
   font-weight: 700;
   font-display: auto;
