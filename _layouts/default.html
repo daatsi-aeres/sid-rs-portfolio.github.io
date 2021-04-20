@@ -96,12 +96,12 @@
               <br>
               <em>{{rsc.publishedOn}}</em>
               {% endif %}<br><br>
-              
+
+              {% if rsc.page %}
+              [<a href="{{rsc.page}}">Project page</a>]&nbsp
               {% if rsc.paper %}
               [<a href={{rsc.paper}}>Paper</a>]&nbsp
               {% endif %}
-              {% if rsc.page %}
-              [<a href="{{rsc.page}}">Project page</a>]&nbsp
               {% endif %}
               {% if rsc.video %}
               [<a href="{{rsc.video}}">Video</a>]&nbsp
