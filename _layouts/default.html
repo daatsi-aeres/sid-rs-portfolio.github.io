@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
@@ -29,13 +29,15 @@
                 Xuxin Cheng
               </h1>
               <p align='center'>xuxinc [at] cs.cmu.edu</p><br>
-              <p>I am a M.S. in Robotics student at CMU advised by Professor <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a>. 
-                I am interested in Reinforcement and Robotics.
+              <p>I am a M.S. in Robotics student at CMU advised by <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a>. 
                 I also work with Prof. <a href="https://hybrid-robotics.berkeley.edu/koushil">Koushil Sreenath</a> at UC Berkeley. 
               </p>
               <p>
-              I received my B.S. from <a href="http://english.bit.edu.cn">Beijing Institute of Technology (BIT)</a>, advised by Prof. <a href="http://ac.bit.edu.cn/szdw/jsdw/20150206132641701113/20150206132641897362/index.htm">Meiling Wang</a>. 
-              I also have experience at <a href="https://path.berkeley.edu">Berkeley PATH</a>, where I worked on Reinforcement Learning based ADAS (Advanced Driver-Assistance Systems) advised by Prof. <a href="https://its.berkeley.edu/people/ching-yao-chan">Ching-Yao Chan</a>.
+              I received my B.S. from <a href="http://english.bit.edu.cn">Beijing Institute of Technology (BIT)</a>.
+              During my undergrad, I worked on Reinforcement Learning based ADAS (Advanced Driver-Assistance Systems) advised by Prof. <a href="https://its.berkeley.edu/people/ching-yao-chan">Ching-Yao Chan</a> at <a href="https://path.berkeley.edu">Berkeley PATH</a>.
+              </p>
+              <p>
+                I am interested in building the equivalent cerebellum (motor control) and cerebrum (intelligence) of humans for Robots.
               </p>
               <p style="text-align:center">
                 <a href="/docs/CV.pdf">CV</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -51,19 +53,18 @@
         </table>
         
         
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
+        <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
           <tr>
             <td>
               <h2>News</h2>
               <ul>
-                <!-- <li><b>August 2021: </b> Peer-reviewed one RA-L paper. -->
                 <li><b>April 2021: </b> Cassie RL work featured on <a href="https://www.technologyreview.com/2021/04/08/1022176/boston-dynamics-cassie-robot-walk-reinforcement-learning-ai/">MIT Tech Review</a>.</li>
                 <li><b>March 2021: </b> Cassie RL paper accepted to ICRA 2021.</li>
               </ul>
             </td>
           </tr>
           
-        </table>
+        </table> -->
         
         <br><br>
 
@@ -74,7 +75,7 @@
           {% for cat in rsc.categories %}
           {% if cat == 'research' %}
           <tr {% if rsc.gif %}onmouseout="{{rsc.abbr}}_stop()" onmouseover="{{rsc.abbr}}_start()"{% endif %}>
-            <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
+            <td style="padding:10px 0px;width:35%;vertical-align:middle;min-width:120px">
               <div class="one" style="width:100%; height:auto; max-width:100%">
                 <div class="two" id='{{rsc.image}}' style="width:100%; height:auto; max-width:100%">
                   <img src='{{rsc.image}}' style="width:100%; height:auto; max-width:100%">
@@ -101,7 +102,7 @@
               <img src="{{rsc.image}}" alt="research image" style="width:auto; height:auto; max-width:100%" />
               {% endif %} -->
             </td>
-            <td style="padding:20px 0px 20px 40px;width:80%;vertical-align:middle">
+            <td style="padding:20px 0px 20px 40px;width:65%;vertical-align:middle">
               <h3>{{rsc.title}}</h3><br>
               {% if rsc.author %}
               {{rsc.author}}
@@ -111,19 +112,16 @@
               <br>
               <em>{{rsc.publishedOn}}</em>
               {% endif %}<br><br>
-
-              {% if rsc.page %}
-              [<a href="{{rsc.page}}">Project page</a>]&nbsp
-              {% if rsc.paper %}
-              [<a href={{rsc.paper}}>Paper</a>]&nbsp
+              
+              {% if rsc.links %}
+              {{rsc.links}}
               {% endif %}
+              
+              {% if rsc.media %}
+              <br><br>
+              Media Coverage: {{rsc.media}}&nbsp
               {% endif %}
-              {% if rsc.video %}
-              [<a href="{{rsc.video}}">Video</a>]&nbsp
-              {% endif %}
-              {% if rsc.code %}
-              [<a href="{{rsc.code}}">Code</a>]&nbsp
-              {% endif %}
+              <p>
               <p>
                 {{ rsc.intro }}
               </p>
@@ -134,7 +132,6 @@
           {% endfor %}
           {% endfor %}
         </table>
-        <p>* denotes equal contribution</p>
         
         <br><br><br>
         <h2>Course Projects</h2>
@@ -146,7 +143,7 @@
           {% if cat == 'course' %}
           
         <tr {% if proj.gif %}onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()"{% endif %}>
-            <td style="padding:20px 0px;width:20%;vertical-align:middle;min-width:120px">
+            <td style="padding:20px 0px;width:35%;vertical-align:middle;min-width:120px">
               <div class="one" style="width:100%; height:auto; max-width:100%">
                 <div class="two" id='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
                   <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
@@ -173,7 +170,7 @@
               <img src="{{proj.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
               {% endif %} -->
             </td>
-            <td style="padding:0px 0px 0px 40px;width:80%;vertical-align:middle">
+            <td style="padding:0px 0px 0px 40px;width:65%;vertical-align:middle">
               <h3>{{proj.title}}</h3>
               {% if proj.course %}
               <br>
@@ -202,7 +199,7 @@
 
         <br> <br> <br> <br> <hr> <br>
         <table border="0" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr height="50px" style="height: 50px;">
+          <tr height="30px" style="height: 30px;">
             <!-- <td style="padding:0px 0px 0px 0px;width:20%;text-align: left;">
               <img src='images/bit_seal.svg' style="width:62%; height:auto; max-width:100%">
             </td>
