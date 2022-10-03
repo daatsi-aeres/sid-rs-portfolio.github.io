@@ -69,6 +69,20 @@
 
         <h2>Research</h2>
         <hr>
+        <script >
+        function togglebib(paperid)
+        {
+            var paper = document.getElementById(paperid) ;
+            var bib = paper.getElementsByTagName('blockquote') ;
+            if (bib.length > 0) {
+                if (bib [0] .style.display == 'none') {
+                    bib [0] .style.display = 'block' ;
+                } else {
+                    bib [0] .style.display = 'none' ;
+                }
+            }
+        }
+        </script>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
           {% for rsc in site.posts %}
           {% for cat in rsc.categories %}
@@ -117,7 +131,30 @@
               
               {% if rsc.links %}
               {{rsc.links}}
+                {% if rsc.bib %}
+                  | <a href="javascript:togglebib('{{rsc.abbr}}')">BibTeX</a> <br>
+                  <div class="paper" id="{{rsc.abbr}}">
+                    <blockquote style="display:none">
+                    <!-- <pre xml:space="preserve" style="display:none"> -->
+                      <!-- <embed src="{{rsc.bib}}" type="text/plain" width="100%" height="200px" /> -->
+                      <!-- <object data="{{rsc.bib}}" width="100%"></object> -->
+                      <!-- {{rsc.bib}} -->
+                      <iframe src="{{rsc.bib}}" scrolling='auto' frameborder='0' width="100%" height="100%">
+                      </iframe>
+                    <!-- </pre> -->
+                    </blockquote>
+                  </div>
+                {% endif %}
               {% endif %}
+              
+              <!-- <blockquote>
+@article{fu2022learning,
+  author = {Fu, Zipeng and Cheng, Xuxin and Pathak, Deepak},
+  title  = {Learning a Unified Policy for Whole-Body Control of Manipulation and Locomotion},
+  journal= {Conference on Robot Learning (CoRL)},
+  year   = {2022}
+}
+              </blockquote> -->
               
               {% if rsc.media %}
               <br><br>
