@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+  {% if jekyll.environment == 'production' %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T1CLN7VBVH"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T1CLN7VBVH');
+    </script>
+  {% endif %}
+
   <title>Xuxin Cheng</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
