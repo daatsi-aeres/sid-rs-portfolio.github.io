@@ -34,22 +34,24 @@ th,
 tr,
 p,
 a {
-  font-family:  'Lato', Verdana, Helvetica, sans-serif;
+  font-family:  Nunito; //, Lato, Verdana, Helvetica, sans-serif;
   // font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
-  font-size: 15px; /*14px*/
+  // font-size: 15px; /*14px*/
   font-display: auto;
+  font-weight: normal;
   line-height: 1.5;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family:  Nunito, 'Lato', Verdana, Helvetica, sans-serif;
+  // font-size: 16px;
   font-display: auto;
 }
 
 h2 {
   // font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
+  font-family:  Nunito, 'Lato', Verdana, Helvetica, sans-serif;
+  // font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
   font-size: 24px;
   font-display: auto;
   font-weight: normal;
@@ -59,7 +61,8 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family:  Nunito, 'Lato', Verdana, Helvetica, sans-serif;
+  // font-family: 'Lato', Verdana, Helvetica, sans-serif;
   // font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
   font-size: 16px;
   font-weight: 700;
@@ -70,7 +73,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
+  font-family: Nunito, 'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
   font-size: 46px;
   font-weight: normal;
   font-display: auto;
