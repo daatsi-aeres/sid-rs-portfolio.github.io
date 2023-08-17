@@ -204,11 +204,15 @@
           {% for cat in proj.categories %}
           {% if cat == 'research' %}
           
-        <tr {% if proj.gif %}onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()"{% endif %}>
-            <td style="padding:20px 0px;width:30%;vertical-align:middle;min-width:120px">
+ 
+          <tr {% if proj.gif %}onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()"{% endif %}>
+            <td style="padding:0px 0px;width:30%;vertical-align:middle;min-width:120px">
+              
               <div class="one" style="width:100%; height:auto; max-width:100%">
                 <div class="two" id='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
-                  <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                  <a href="{{proj.webpage}}">
+                    <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                  </a>
                 </div>
                 {% if proj.gif %}
                 <img src='{{proj.gif}}' style="width:100%; height:auto; max-width:100%">
