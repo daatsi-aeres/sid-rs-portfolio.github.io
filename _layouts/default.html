@@ -124,7 +124,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
           {% for rsc in site.posts %}
           {% for cat in rsc.categories %}
-          {% if cat == 'research' %}
+          {% if cat == 'publication' %}
           <tr {% if rsc.gif %}onmouseout="{{rsc.abbr}}_stop()" onmouseover="{{rsc.abbr}}_start()"{% endif %}>
             <td style="padding:0px 0px;width:30%;vertical-align:middle;min-width:120px">
               
@@ -204,7 +204,72 @@
           {% endfor %}
           {% endfor %}
         </table>
-        
+
+        <br><br><br>
+        <h2>Research</h2>
+        <hr>
+
+        <table border="0" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          {% for proj in site.posts %}
+          {% for cat in proj.categories %}
+          {% if cat == 'course' %}
+          
+        <tr {% if proj.gif %}onmouseout="{{proj.abbr}}_stop()" onmouseover="{{proj.abbr}}_start()"{% endif %}>
+            <td style="padding:20px 0px;width:30%;vertical-align:middle;min-width:120px">
+              <div class="one" style="width:100%; height:auto; max-width:100%">
+                <div class="two" id='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                  <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                </div>
+                {% if proj.gif %}
+                <img src='{{proj.gif}}' style="width:100%; height:auto; max-width:100%">
+                {% else %}
+                <img src='{{proj.image}}' style="width:100%; height:auto; max-width:100%">
+                {% endif %}
+              </div>
+              <script type="text/javascript">
+                function {{proj.abbr}}_start() {
+                  document.getElementById('{{proj.image}}').style.opacity = "0";
+                }
+
+                function {{proj.abbr}}_stop() {
+                  document.getElementById('{{proj.image}}').style.opacity = "1";
+                }
+                nlt_stop()
+              </script>
+              <!-- {% if proj.gif %}
+              <img src="{{proj.image}}" onmouseover="src='{{proj.gif}}'" onmouseout="src='{{proj.image}}'" style="width:auto; height:auto; max-width:100%"/>
+              {% else %}
+              <img src="{{proj.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              {% endif %} -->
+            </td>
+            <td style="padding:0px 0px 0px 40px;width:70%;vertical-align:middle">
+              <h3>{{proj.title}}</h3>
+              {% if proj.course %}
+              <br>
+              <em>{{proj.course}}</em>
+              {% endif %}
+              <br><br>
+              {% if proj.page %}
+              [<a href="{{proj.page}}">Project page</a>]&nbsp
+              {% endif %}
+              {% if proj.code %}
+              [<a href="{{proj.code}}">Code</a>]&nbsp
+              {% endif %}
+              {% if proj.video %}
+              [<a href="{{proj.video}}">Video</a>]&nbsp
+              {% endif %}
+              <p>
+                {{ proj.intro }}
+              </p>
+              
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+
         <br><br><br>
         <h2>Course Projects</h2>
         <hr>
