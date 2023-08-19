@@ -1,4 +1,4 @@
-@inproceedings{cheng2023legmanip,
+@inproceedings{radian2023dvrk,
 title={Learning Nonprehensile Dynamic Manipulation: Sim2real Vision-based
 Policy with a Surgical Robot}, 
 author={Gondokaryono, Radian and  Haiderbhai, Mustafa and Suryadevara, Sai Aneesh and Kahrs, Lueder Alexander },
