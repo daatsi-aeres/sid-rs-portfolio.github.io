@@ -95,7 +95,6 @@ h1 {
   margin-right: 0px;
 
 }
-
 .one {
   width: 160px;
   height: 160px;
@@ -130,9 +129,31 @@ span.highlight {
 
 /* Adjust the title size within the posts */
 .post-title {
+  font-size: 46px;
+  font-weight: normal;
+  font-display: auto;
+  text-align: center;
+  padding: 10px;
+  margin-block-start: 14px;
+  margin-block-end: 14px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px 0; /* Padding above and below the text */
+  background-color: #e8e8e8; /* Light grey background */
+  display: inline-block; /* Wrap the background to the text */
+  width: 100%; /* Allow the width to fit the content */
+  border-radius: 5px; /* Rounded corners for polish */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+
+}
+
+.post-title2 {
   font-size: 1.75rem; /* Smaller font size for titles */
   margin-bottom: 0.5rem; /* Adjust spacing below the title as needed */
 }
+
+
 
 /* Center the main post content and adjust its width */
 .post-content {
