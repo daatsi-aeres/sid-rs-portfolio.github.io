@@ -42,6 +42,15 @@ a {
   line-height: 1.5;
 }
 
+navbar {
+  font-family:  Nunito, 'Lato', Verdana, Helvetica, sans-serif;
+  // font-family:  'TeXGyrePagella', 'Palatino Linotype', "Book Antiqua", Palatino, serif;
+  font-size: 16px;
+  font-display: auto;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
 strong {
   font-family:  Nunito, 'Lato', Verdana, Helvetica, sans-serif;
   // font-size: 16px;
@@ -110,6 +119,145 @@ h1 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* This will center the post header and constrain its width */
+.post-header {
+  text-align: center;
+  max-width: 800px; /* Adjust the width as you like */
+  margin: 0 auto; /* This centers the header */
+}
+
+/* Adjust the title size within the posts */
+.post-title {
+  font-size: 1.75rem; /* Smaller font size for titles */
+  margin-bottom: 0.5rem; /* Adjust spacing below the title as needed */
+}
+
+/* Center the main post content and adjust its width */
+.post-content {
+  max-width: 800px; /* Adjust the width as you like */
+  margin: 1rem auto; /* This centers the content and adds spacing */
+  padding: 0 1rem; /* Adds padding on the left and right */
+}
+
+/* Adjust the size of the post titles in the list */
+.post-content h2 {
+  text-align: center; /* Center-align all h2 elements within post-content */
+  font-size: 1.5rem; /* Adjust the size as you like */
+  margin-top: 2rem; /* Adds spacing above the title */
+  margin-bottom: 1rem; /* Adds spacing below the title */
+}
+
+/* Professional touches */
+body {
+  background: #f8f8f8; /* A light grey background */
+  color: #333; /* Dark grey text for better readability */
+}
+
+/* Refine list styles */
+.post-content ul {
+  list-style-type: none; /* Removes default list styling */
+  padding-left: 0; /* Aligns list with the rest of the content */
+}
+
+.post-content li {
+  background: #fff; /* White background for each list item */
+  margin-bottom: 0.75rem; /* Space between list items */
+  padding: 1rem; /* Padding inside list items */
+  border-radius: 8px; /* Rounded corners for polish */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Ensure links inside the list stand out */
+.post-content li a {
+  color: #07889b; /* Theme color for links */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.post-content li a:hover {
+  text-decoration: underline; /* Adds underline on hover for interactivity */
+}
+
+/* Medium-style image zoom effect */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive typography and layout */
+@media (max-width: 768px) {
+  .post-content {
+    width: 95%;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  background: #ffffff; /* or any color you prefer */
+  border-bottom: 1px solid #dddddd;
+  padding: 0.5rem 1rem;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 1rem; /* Spacing between nav items */
+}
+
+.nav-link {
+  color: #333333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: #07889b;
+  background: #f5f5f5;
+  border-radius: 5px; /* Optional: rounded corners on hover */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+  
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

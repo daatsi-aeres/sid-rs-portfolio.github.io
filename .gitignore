@@ -9,3 +9,5 @@ node_modules
 package.json
 tn/
 favicon.ico
+*vendor*
+*.vscode*
