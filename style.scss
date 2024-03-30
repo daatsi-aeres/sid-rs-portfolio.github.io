@@ -178,16 +178,25 @@ body {
 
 /* Refine list styles */
 .post-content ul {
-  list-style-type: none; /* Removes default list styling */
-  padding-left: 0; /* Aligns list with the rest of the content */
+  
 }
 
 .post-content li {
-  background: #fff; /* White background for each list item */
-  margin-bottom: 0.75rem; /* Space between list items */
-  padding: 1rem; /* Padding inside list items */
-  border-radius: 8px; /* Rounded corners for polish */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  
+}
+
+.post-content blockquote {
+  width: 100%; /* Ensures the element tries to span the full width of its parent */
+  max-width: 100%; /* Prevents the element from extending beyond the width of its parent */
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: 0.75rem 0; /* This removes any horizontal margin which might restrict the width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  background: #f7f7f7;
+  border-left: 10px solid #ccc; /* A nice touch for blockquote styling */
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Ensure links inside the list stand out */
@@ -279,6 +288,18 @@ img {
   .nav-item {
     margin: 0.5rem 0;
   }
+}
+
+
+/* Side Note Styles */
+.side-note {
+  border: 1px solid #cccccc; /* Adds a border around the side note */
+  padding: 15px; /* Adds some padding inside the box */
+  margin: 20px 0; /* Adds some space above and below the side note */
+  font-style: italic; /* Makes the font italic */
+  background-color: #f9f9f9; /* Light background for the side note */
+  border-radius: 5px; /* Optional: rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a shadow for depth */
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
