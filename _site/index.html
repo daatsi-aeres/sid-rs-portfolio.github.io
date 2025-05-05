@@ -7,13 +7,13 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-container">
-          <a class="navbar-brand" href="https://sai-aneesh.github.io">Sai Aneesh Suryadevara</a>
+          <a class="navbar-brand" href="http://localhost:4000">AS</a>
           <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-link" href="https://sai-aneesh.github.io">Home</a>
+                  <a class="nav-link" href="http://localhost:4000">Home</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="https://sai-aneesh.github.io/blog">Notes</a>
+                  <a class="nav-link" href="http://localhost:4000/blog">Notes</a>
               </li>
           </ul>
       </div>
@@ -28,7 +28,7 @@
 
   <link rel="stylesheet" type="text/css" href="/style.css" />
   <link rel="shortcut icon" type="images/png" href="images/favicon.png">
-  <link rel="canonical" href="https://sai-aneesh.github.io/">
+  <link rel="canonical" href="http://localhost:4000/">
   <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
   
@@ -136,7 +136,50 @@
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" border="0">
         
         
+        <tr onmouseout="wildlma_stop()" onmouseover="wildlma_start()">
+          <td style="padding:0px 0px;width:30%;vertical-align:middle;min-width:120px">
+            <div class="one" style="width:100%; height:auto; max-width:100%">
+              <div class="two" id='_pages/research/wildlma/thumbnail.png' style="width:100%; height:auto; max-width:100%">
+                <a href="https://wildlma.github.io/">
+                  <img src='_pages/research/wildlma/thumbnail.png' style="width:100%; height:auto; max-width:100%">
+                </a>
+              </div>
+              <img src='_pages/research/wildlma/demo.gif' style="width:100%; height:auto; max-width:100%">
+            </div>
+            <script type="text/javascript">
+              function wildlma_start() {
+                document.getElementById('_pages/research/wildlma/thumbnail.png').style.opacity = "0";
+              }
         
+              function wildlma_stop() {
+                document.getElementById('_pages/research/wildlma/thumbnail.png').style.opacity = "1";
+              }
+              wildlma_stop()
+            </script>
+          </td>
+          <td style="padding:20px 0px 20px 40px;width:70%;vertical-align:middle">
+            <a href="https://wildlma.github.io/"><h3>WildLMA: Long Horizon Loco-MAnipulation in the Wild</h3></a><br>
+            
+            Ri-Zhao Qiu*, Yuchen Song*, Xuanbin Peng*, <b>Sai Aneesh Suryadevara</b>, et al., Xiaolong Wang
+            
+            <br>
+            <em>IEEE International Conference on Robotics and Automation (ICRA)
+              2025</em>
+            <br><br>
+
+            <a href="https://arxiv.org/abs/2411.15131">Paper</a> | 
+            <a href="https://wildlma.github.io/">Webpage</a> | 
+            <a href="javascript:togglebib('wildlma')">BibTeX</a>
+            <div class="paper" id="wildlma">
+              <blockquote style="display:none">
+                <iframe src="_pages/research/wildlma/bib.txt" scrolling='auto' frameborder='0' width="100%" height="100%">
+                </iframe>
+              </blockquote>
+            </div>
+            
+            <p>Long horizon loco-manipulation with LLM planner and wholebody imitation learning skill sets</p>
+          </td>
+        </tr> 
         
         
         
