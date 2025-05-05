@@ -1,0 +1,9 @@
+@misc{qiu2025wildlmalonghorizonlocomanipulation,
+      title={WildLMa: Long Horizon Loco-Manipulation in the Wild}, 
+      author={Ri-Zhao Qiu and Yuchen Song and Xuanbin Peng and Sai Aneesh Suryadevara and Ge Yang and Minghuan Liu and Mazeyu Ji and Chengzhe Jia and Ruihan Yang and Xueyan Zou and Xiaolong Wang},
+      year={2025},
+      eprint={2411.15131},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2411.15131}, 
+}
